@@ -4,17 +4,18 @@ const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
-const dbFilePath = path.join(__dirname, 'db', 'db.json');
+const dbFilePath = path.join(__dirname, '..', '..', 'db', 'db.json');
 
 // Middleware for parsing JSON request bodies
 app.use(express.json());
 
-// HTML routes
+// Serve the notes.html file
 app.get('/notes', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'notes.html'));
 });
 
-app.get('*', (req, res) => {
+// Serve the index.html file
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'index.html'));
 });
 
