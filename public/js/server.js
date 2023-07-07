@@ -8,7 +8,7 @@ const mime = require('mime');
 const dbFilePath = path.join(__dirname, '..', '..', 'db', 'db.json');
 
 // Serve static files from the 'assets' directory
-app.use(express.static(path.join(__dirname, '..', '..', 'assets'), {
+app.use(express.static(path.join(__dirname, '/public'), {
   setHeaders: (res, filePath) => {
     const mimeType = mime.getType(filePath);
     if (mimeType === 'text/css' || mimeType === 'application/javascript') {
