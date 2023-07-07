@@ -11,11 +11,11 @@ app.use(express.json());
 
 // HTML routes
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, 'notes', 'notes.html'));
+  res.sendFile(path.join(__dirname, '..', '..', 'notes.html'));
 });
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, '..', '..', 'index.html'));
 });
 
 // API routes
