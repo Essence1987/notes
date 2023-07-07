@@ -3,19 +3,10 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const mime = require('mime');
 
 const dbFilePath = path.join(__dirname, '..', '..', 'db', 'db.json');
 
 // Serve static files from the 'assets' directory
-app.use(express.static(path.join(__dirname, '/public'), {
-  setHeaders: (res, filePath) => {
-    const mimeType = mime.getType(filePath);
-    if (mimeType === 'text/css' || mimeType === 'application/javascript') {
-      res.setHeader('Content-Type', mimeType);
-    }
-  }
-}));
 
 
 // Middleware for parsing JSON request bodies
