@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const dbFilePath = path.join(__dirname, '..', '..', 'db', 'db.json');
 
 // Middleware for static files
-app.use(express.static(__dirname + '..'));
+app.use(express.static(__dirname + '/public/'));
 
 // Middleware for parsing JSON request bodies
 app.use(express.json());
