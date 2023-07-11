@@ -22,19 +22,14 @@ To run this application, clone a copy onto your pc by entering the following com
 
 The following gif shows a mock-up of the application running on a server:
 
-![Gif showing a website with a user creating and saving notes.](./examples/circle.svg)
-
-For a demonstration, please watch the following video:
-
-https://github.com/Essence1987/logos/assets/129245370/258125e9-d815-4098-afec-2a669e924604
-
+![Gif showing a website with a user creating and saving notes.](./public/assets/notes.gif)
 
 # **Technology**
 
--NPM
--EXPRESS
--FS
--UUID
+<li>-NPM</li>
+<li>-EXPRESS</li>
+<li>-FS</li>
+<li>-UUID</li></br>
 
 # **Credits**
 
